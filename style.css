@@ -61,29 +61,29 @@ h1, h2 {
 
 /* Give each section a unique scrapbook-style background */
 #home {
-  background: url("assets/home-bg.jpg") no-repeat center center/cover;
+  background: url("home-bg.jpg") no-repeat center center/cover;
 }
 
 #about {
-  background: url("assets/about.jpg") no-repeat center center/cover;
+  background: url("about.jpg") no-repeat center center/cover;
   border-top: 6px dashed #f48fb1;
   border-bottom: 6px dashed #f48fb1;
 }
 
 #tools {
-  background: url("assets/tools.jpg") no-repeat center center/cover;
+  background: url("tools.jpg") no-repeat center center/cover;
   border-top: 6px dashed #64b5f6;
   border-bottom: 6px dashed #64b5f6;
 }
 
 #projects {
-  background: url("assets/projects.jpg") no-repeat center center/cover;
+  background: url("projects.jpg") no-repeat center center/cover;
   border-top: 6px dashed #ba68c8;
   border-bottom: 6px dashed #ba68c8;
 }
 
 #contact {
-  background: url("assets/contact.jpg") no-repeat center center/cover;
+  background: url("contact.jpg") no-repeat center center/cover;
   border-top: 6px dashed #aed581;
   border-bottom: 6px dashed #aed581;
 }
@@ -92,7 +92,7 @@ h1, h2 {
 
 /* Home Section */
 .home-section {
-  background: url("assets/home-bg.jpg") no-repeat center center/cover; /* yung picture na binigay mo → rename to home-bg.jpg */
+  background: url("home-bg.jpg") no-repeat center center/cover; /* yung picture na binigay mo → rename to home-bg.jpg */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -464,4 +464,5 @@ h1, h2 {
   color: #000;
   margin: 0 8px;
 }
+
 
