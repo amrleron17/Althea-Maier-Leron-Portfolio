@@ -1,0 +1,467 @@
+/* General Styles */
+html {
+  scroll-behavior: smooth; /* smooth scroll kapag click sa navbar */
+}
+
+body {
+  margin: 0;
+  font-family: 'Patrick Hand', cursive;
+  background: #fefefe;
+  color: #333;
+}
+
+h1, h2 {
+  font-family: 'Chewy', cursive;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Navbar */
+.navbar {
+  background: #ffecf0;
+  padding: 15px;
+  text-align: center;
+  border-bottom: 3px dashed #ff8fab;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-family: 'Fredoka One', cursive;
+  color: #ff4081;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.navbar a:hover {
+  transform: rotate(-5deg) scale(1.2);
+  color: #6bbbfc;
+}
+
+
+/* Sections */
+.page {
+  padding: 100px 20px;
+  min-height: 100vh;
+}
+
+/* Give each section a unique scrapbook-style background */
+#home {
+  background: url("assets/home-bg.jpg") no-repeat center center/cover;
+}
+
+#about {
+  background: url("assets/about.jpg") no-repeat center center/cover;
+  border-top: 6px dashed #f48fb1;
+  border-bottom: 6px dashed #f48fb1;
+}
+
+#tools {
+  background: url("assets/tools.jpg") no-repeat center center/cover;
+  border-top: 6px dashed #64b5f6;
+  border-bottom: 6px dashed #64b5f6;
+}
+
+#projects {
+  background: url("assets/projects.jpg") no-repeat center center/cover;
+  border-top: 6px dashed #ba68c8;
+  border-bottom: 6px dashed #ba68c8;
+}
+
+#contact {
+  background: url("assets/contact.jpg") no-repeat center center/cover;
+  border-top: 6px dashed #aed581;
+  border-bottom: 6px dashed #aed581;
+}
+
+
+
+/* Home Section */
+.home-section {
+  background: url("assets/home-bg.jpg") no-repeat center center/cover; /* yung picture na binigay mo → rename to home-bg.jpg */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #222;
+}
+
+.cutout {
+  background: #ffe57f;
+  padding: 5px 10px;
+  border: 2px dashed #f50057;
+  transform: rotate(-3deg);
+  display: inline-block;
+}
+
+.start-btn {
+  display: inline-block;
+  margin-top: 350px;
+  padding: 15px 30px;
+  font-family: 'Fredoka One';
+  font-size: 20px;
+  background: #ffea00;
+  border: 3px solid #333;
+  box-shadow: 4px 4px #888;
+  text-decoration: none;
+  color: #333;
+}
+
+.start-btn:hover {
+  transform: scale(1.1) rotate(2deg);
+  background: #ff4081;
+  color: white;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1px;
+}
+
+.about-left {
+  flex: 1;
+  text-align: center;
+}
+
+.profile-img {
+  width: 250px;
+  border: 8px solid white;
+  box-shadow: 5px 5px 10px #aaa;
+  border-radius: 15px;
+}
+
+.about-right {
+  flex: 2;
+  min-width: 280px;
+}
+
+
+
+/* ✨ Bigger, notebook-style note */
+.note {
+  background: #fffef8;
+  font-size: 20px;
+  line-height: 1.7;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 3px 4px 10px rgba(0,0,0,0.1);
+  border: 2px dashed #f9c5d1;
+  font-family: 'Patrick Hand';
+  margin-bottom: 25px;
+}
+
+/* Sticky Notes for Skills and Experience */
+.skills-experience {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.box {
+  flex: 1;
+  min-width: 220px;
+  max-width: 300px;
+  background: #d3f5f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 6px 12px rgba(0,0,0,0.15);
+  text-align: left;
+  transform: rotate(-2deg);
+  transition: all 0.25s ease-in-out;
+  position: relative;
+  font-family: 'Patrick Hand';
+}
+
+/* Alternate tilt and background for scrapbook feel */
+.box:nth-child(2) {
+  background: #ffe4ec;
+  transform: rotate(2deg);
+}
+
+.box:hover {
+  transform: rotate(0deg) scale(1.03);
+  box-shadow: 6px 8px 15px rgba(0,0,0,0.25);
+}
+
+.box h3 {
+  font-family: 'Chewy', cursive;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+/* Optional: “tape” effect at top of sticky notes */
+.box::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 80px;
+  height: 25px;
+  background: rgba(255, 240, 180, 0.8);
+  border-radius: 3px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-family: 'Fredoka One', cursive;
+  text-decoration: none;
+  color: white;
+  background: #ff4081;
+  border: 3px solid #c2185b;
+  box-shadow: 4px 4px #888;
+  transition: 0.3s;
+
+  /* NEW: Align to right */
+  float: right; /* simplest way */
+}
+
+
+.resume-btn:hover {
+  background: #f50057;
+  transform: scale(1.05) rotate(-1deg);
+}
+
+
+
+
+/* Tools Section */
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 70px;
+  margin-top: 30px;
+  justify-items: center;
+}
+
+.tool-card {
+  width: 180px;
+  height: 180px;
+  perspective: 1000px; /* for 3D flip */
+}
+
+.tool-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.tool-card:hover .tool-inner {
+  transform: rotateY(180deg);
+}
+
+.tool-front, .tool-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 4px 4px #bbb;
+}
+
+/* Front Side */
+.tool-front {
+  background: #fff9c4;
+  border: 2px dashed #ff7043;
+}
+
+.tool-front img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 10px;
+}
+
+.tool-front p {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 20px;
+}
+
+/* Back Side */
+.tool-back {
+  background: #ffe0b2;
+  border: 2px dashed #d84315;
+  transform: rotateY(180deg);
+  font-family: 'Patrick Hand';
+  font-size: 18px;
+  padding: 10px;
+}
+
+
+
+
+
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.project-card {
+  background: #fce4ec;
+  padding: 10px;
+  border: 3px solid #ec407a;
+  box-shadow: 3px 3px #999;
+  transform: rotate(-2deg);
+  transition: 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  border: 3px solid white;
+}
+
+.project-card a {
+  color: #9e66d1;
+  text-decoration: none;
+}
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+
+
+.project-card:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Contact */
+/* Contact Section */
+.contact-section {
+  background: #fffaf7;
+  text-align: center;
+  padding: 100px 20px;
+  border-top: 6px dashed #f8bbd0;
+  border-bottom: 6px dashed #f8bbd0;
+}
+
+.contact-card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fefaee;;
+  border: 4px solid #ffb6c1;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Avatar */
+.contact-left {
+  flex: 1;
+  text-align: center;
+}
+.avatar {
+  width: 180px;
+  border-radius: 15px;
+  border: 4px solid #ffb6c1;
+}
+
+/* Info Section */
+.contact-right {
+  flex: 2;
+  text-align: left;
+  font-size: 18px;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.contact-name {
+  font-family: 'Chewy', cursive;
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.contact-right a {
+  color: #ff4081;
+  text-decoration: none;
+}
+.contact-right a:hover {
+  text-decoration: underline;
+}
+
+/* Send Message Button */
+.send-btn {
+  background: #d7f7c0;
+  border: 3px dashed #558b2f;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: 'Fredoka One', cursive;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0 #aaa;
+  transition: 0.2s;
+}
+.send-btn:hover {
+  background: #b2ebf2;
+  transform: scale(1.05);
+}
+
+/* Barcode style line */
+.barcode {
+  width: 58%;
+  height: 40px;
+  background: repeating-linear-gradient(
+    90deg,
+    #000 0px,
+    #000 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+/* Star border */
+.star-border {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: #ffb6c1;
+  padding: 10px 0;
+}
+.star-border span {
+  font-size: 30px;
+  color: #000;
+  margin: 0 8px;
+}
+
